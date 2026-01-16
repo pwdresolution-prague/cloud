@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { authJwtSecret } from "../utils/authConfig.js";
+import { authJwtSecret } from "../utils/authConfig.js"; // "../" By mi kdykoliv na serveru hodilo chybu jelikož nedokáže jít server na Endoře přes FTP o složku výš, zatím jsem to řešil jinačí strukturou
 
 export function requireAuth(req, res, next) {
   const header = req.headers.authorization || "";
